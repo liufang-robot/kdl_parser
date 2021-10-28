@@ -18,10 +18,13 @@ add_library(
 target_include_directories(${PROJECT_NAME}
   PUBLIC
   "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
+  "$<BUILD_INTERFACE:${orocos_kdl_INCLUDE_DIRS}>"
   "$<INSTALL_INTERFACE:include>"
 )
+target_link_libraries(${PROJECT_NAME}
+  orocos-kdl
+)
 ament_target_dependencies(${PROJECT_NAME}
-  orocos_kdl
   urdf
   urdfdom_headers)
 
