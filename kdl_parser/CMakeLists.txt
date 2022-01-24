@@ -50,7 +50,7 @@ if(catkin_FOUND)
   )
 endif()
 
-add_library(${PROJECT_NAME} SHARED src/kdl_parser.cpp)
+add_library(${PROJECT_NAME} STATIC src/kdl_parser.cpp)
 target_link_libraries(${PROJECT_NAME}
   ${TinyXML_LIBRARIES} ${TinyXML2_LIBRARIES} ${orocos_kdl_LIBRARIES}
 )
@@ -98,5 +98,5 @@ else()
           LIBRARY DESTINATION lib
           ARCHIVE DESTINATION lib)
   install(DIRECTORY include/${PROJECT_NAME}/
-          DESTINATION include)
+          DESTINATION include/${PROJECT_NAME})
 endif()
