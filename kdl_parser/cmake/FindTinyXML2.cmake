@@ -55,7 +55,7 @@ endif()
 
 # Find headers and libraries
 find_path(TinyXML2_INCLUDE_DIR NAMES tinyxml2.h PATH_SUFFIXES "tinyxml2" ${TinyXML2_INCLUDE_PATH})
-find_library(TinyXML2_LIBRARY  NAMES tinyxml2   PATH_SUFFIXES "tinyxml2" ${TinyXML2_LIBRARY_PATH})
+find_library(TinyXML2_LIBRARY  NAMES libtinyxml2.a   PATH_SUFFIXES "tinyxml2" ${TinyXML2_LIBRARY_PATH})
 
 mark_as_advanced(TinyXML2_INCLUDE_DIR
                  TinyXML2_LIBRARY)
